@@ -8,9 +8,9 @@ import (
 	"os"
 
 	// nolint: staticcheck
-	"github.com/golang/protobuf/proto"
-	"github.com/ysugimoto/grpc-graphql-gateway/protoc-gen-graphql/generator"
-	"github.com/ysugimoto/grpc-graphql-gateway/protoc-gen-graphql/spec"
+	"github.com/nebucloud/grpc-graphql-gateway/protoc-gen-graphql/generator"
+	"github.com/nebucloud/grpc-graphql-gateway/protoc-gen-graphql/spec"
+	"google.golang.org/protobuf/proto"
 	plugin "google.golang.org/protobuf/types/pluginpb"
 )
 

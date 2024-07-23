@@ -18,12 +18,14 @@ command: plugin clean
 			-o ../dist/${GRAPHQL_CMD}
 
 plugin:
+	mkdir -p generated
 	protoc -I ${PROTOPATH} \
 		-I include/graphql \
-		--go_out=./graphql \
+		--go-grpc_out=./generated \
 		include/graphql/graphql.proto
-	mv graphql/github.com/ysugimoto/grpc-graphql-gateway/graphql/graphql.pb.go graphql/
-	rm -rf graphql/github.com
+	mkdir -p graphql
+	find ./generated -name "*.pb.go" -exec mv {} graphql/ \;
+	rm -rf ./generated
 
 lint:
 	golangci-lint run

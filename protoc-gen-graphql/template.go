@@ -8,7 +8,7 @@ import (
 {{- if .Services }}
 	"context"
 
-	"github.com/ysugimoto/grpc-graphql-gateway/runtime"
+	"github.com/nebucloud/grpc-graphql-gateway/runtime"
 	"google.golang.org/grpc"
 	"github.com/pkg/errors"
 {{- end }}

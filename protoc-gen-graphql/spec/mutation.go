@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 
 	"github.com/iancoleman/strcase"
-	"github.com/ysugimoto/grpc-graphql-gateway/graphql"
+	"github.com/nebucloud/grpc-graphql-gateway/graphql"
 )
 
 // Mutation spec wraps MethodDescriptorProto.

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
-	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
+	descriptor "google.golang.org/protobuf/types/descriptorpb"
+	"google.golang.org/protobuf/types/pluginpb"
 )
 
 // File spec wraps FileDescriptorProto
@@ -22,12 +22,12 @@ type File struct {
 
 	isCamel bool
 
-	CompilerVersion *plugin.Version
+	CompilerVersion *pluginpb.Version
 }
 
 func NewFile(
 	d *descriptor.FileDescriptorProto,
-	cv *plugin.Version,
+	cv *pluginpb.Version,
 	isCamel bool,
 ) *File {
 

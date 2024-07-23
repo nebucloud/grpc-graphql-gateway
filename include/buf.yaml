@@ -1,5 +1,5 @@
 version: v1
-name: buf.build/ysugimoto/grpc-graphql-gateway
+name: buf.build/nebucloud/grpc-graphql-gateway
 breaking:
   use:
     - FILE
